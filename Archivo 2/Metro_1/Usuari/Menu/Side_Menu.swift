@@ -34,7 +34,7 @@ struct Side_Menu: View {
             Button("Creadores") {
                  self.isModal = true
              }.sheet(isPresented: $isModal, content: {
-                // Credenciales()
+                 Credenciales()
              }).foregroundColor(.black).opacity(0.4)
                 .fontWeight(.semibold)
                 .padding(.top, -15)
