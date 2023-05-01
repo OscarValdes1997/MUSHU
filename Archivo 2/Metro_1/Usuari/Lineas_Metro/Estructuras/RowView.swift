@@ -16,7 +16,7 @@ struct RowView: View {
     var body: some View {
        
         HStack(){
-            Ximena.avatar.resizable().frame(width: 45, height: 45)
+            Ximena.avatar.resizable().frame(width: 60, height: 60)
                 .clipShape(Circle())
                 .overlay{
                     Circle().stroke(.white,lineWidth: 1)
@@ -24,7 +24,6 @@ struct RowView: View {
     
             VStack(alignment: .leading){
                 Text(Ximena.titulo)
-                    
                     .foregroundColor(Color.black)
             }
     

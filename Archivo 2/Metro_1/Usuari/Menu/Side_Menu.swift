@@ -41,7 +41,17 @@ struct Side_Menu: View {
             
             
             VStack(alignment: .leading, spacing: 5){
-
+                NavigationLink{
+                  Usuario_Invalido()
+                } label: {
+                    Image(systemName: "tram.fill").font(.system(size: 30, weight: .bold))
+                   Text("Lineas")
+                }.fontWeight(.semibold)
+                    .foregroundColor(Color.black)
+                    .padding(.vertical,12)
+                    .padding(.horizontal,20)
+                    .background(.orange)
+                    .cornerRadius(15)
                 NavigationLink{
                   ReportesView()
                 } label: {
