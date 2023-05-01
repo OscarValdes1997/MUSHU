@@ -23,47 +23,50 @@ struct Search: View {
     var body: some View {
         
         NavigationView{
-            
-            searchText == "" ?
-            
-            List(searchResults) { LineaDetails in
-                NavigationLink(destination: {LineasDetailsView(LineaDetails: LineaDetails)
-                    
-                }){
-                    
-                    Text("\(LineaDetails.emoji)\(LineaDetails.name)")
-                        .padding(6)
+            ZStack{
+                
+                searchText == "" ?
+                
+                List(searchResults) { LineaDetails in
+                    NavigationLink(destination: {LineasDetailsView(LineaDetails: LineaDetails)
                         
+                    }){
+                        
+                        Text("\(LineaDetails.emoji)\(LineaDetails.name)")
+                            .padding(6)
+                        
+                    }
+                    
                 }
                 
-            }
-            
-            .navigationTitle("Busca")
-            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always),
-            prompt: "Busca tu estación")
-      
-            .opacity(0.0)
-            
-            :
-            
-            List(searchResults) { LineaDetails in
-                NavigationLink(destination: {LineasDetailsView(LineaDetails: LineaDetails)
-                    
-                }){
-                    
-                    Text("\(LineaDetails.emoji)\(LineaDetails.name)")
-                        .padding(6)
+                .navigationTitle("Busca")
+                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always),
+                            prompt: "Busca tu estación")
+                
+                .opacity(0.0)
+                
+                :
+                
+                List(searchResults) { LineaDetails in
+                    NavigationLink(destination: {LineasDetailsView(LineaDetails: LineaDetails)
                         
+                    }){
+                        
+                        Text("\(LineaDetails.emoji)\(LineaDetails.name)")
+                            .padding(6)
+                        
+                    }
+                    
                 }
                 
+                .navigationTitle("Busca")
+                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always),
+                            prompt: "Busca tu estación")
+                
+                .opacity(1)
+                
+                
             }
-            
-            .navigationTitle("Busca")
-            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always),
-            prompt: "Busca tu estación")
-      
-            .opacity(1)
-            
             
         }
        

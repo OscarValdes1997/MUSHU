@@ -67,7 +67,7 @@ struct Side_Menu: View {
                     .cornerRadius(15)
                 
                 NavigationLink{
-                //  CamaraView()
+                    CameraView()
                     
                 } label: {
                     Image(systemName: "camera.fill").font(.system(size: 30, weight: .bold))
